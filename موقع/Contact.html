@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>لوفينغ هومز | تواصل معنا</title>
+  <meta name="description" content="تواصل معنا عبر نموذج واضح وسريع أو عبر معلومات التواصل المباشرة." />
+  <meta name="keywords" content="تواصل فندق كلاب رسائل نموذج" />
+
+  <link rel="stylesheet" href="Style.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <span class="brand-mark">DR</span>
+        <span class="brand-text">لوفينغ هومز</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html">الرئيسية</a>
+        <a href="About.html">من نحن</a>
+        <a href="Facilities.html">الخدمات</a>
+        <a href="Packages.html">الحزم والأسعار</a>
+        <a href="BooKings.html">الحجز</a>
+        <a href="Contact.html" class="active">تواصل</a>
+      </nav>
+
+      <a class="header-cta" href="BooKings.html">احجز الآن</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="page-hero-content">
+          <h1>تواصل معنا</h1>
+          <p>
+            ارسل لنا رسالتك بسهولة. تم تحسين الصفحة لتكون واضحة وسريعة
+            مع نموذج قصير حتى لا يضيع وقت المستخدم.
+          </p>
+
+          <div class="page-hero-actions">
+            <a class="btn primary" href="#contactForm">إرسال رسالة</a>
+            <a class="btn ghost" href="BooKings.html">انتقل للحجز</a>
+          </div>
+        </div>
+
+        <div class="page-hero-media" aria-label="صورة صفحة التواصل">
+          <img
+            src="img/لقطة%20شاشة%202026-03-04%20021905.png"
+            alt="صورة توضيحية لصفحة التواصل"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid" id="contactForm">
+
+        <div class="contact-card">
+          <div class="section-head">
+            <h2>نموذج التواصل</h2>
+            <p>اكتب بياناتك ورح تظهر رسالة نجاح بعد الإرسال.</p>
+          </div>
+
+          <form class="form" id="formContact" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="fullName">الاسم</label>
+                <input type="text" id="fullName" placeholder="مثال: محمد" />
+                <div class="error" id="errFullName"></div>
+              </div>
+
+              <div class="field">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" placeholder="example@email.com" />
+                <div class="error" id="errEmail"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" placeholder="مثال: 0790000000" />
+                <div class="error" id="errPhone"></div>
+              </div>
+
+              <div class="field">
+                <label for="topic">موضوع الرسالة</label>
+                <select id="topic">
+                  <option value="">اختر</option>
+                  <option value="booking">استفسار عن الحجز</option>
+                  <option value="prices">استفسار عن الأسعار</option>
+                  <option value="services">استفسار عن الخدمات</option>
+                  <option value="other">موضوع آخر</option>
+                </select>
+                <div class="error" id="errTopic"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">الرسالة</label>
+              <textarea id="message" rows="5" placeholder="اكتب رسالتك هنا"></textarea>
+              <div class="error" id="errMessage"></div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">إرسال</button>
+              <button class="btn ghost" type="button" id="resetContactBtn">مسح</button>
+            </div>
+
+            <div class="success" id="successContactMsg"></div>
+          </form>
+        </div>
+
+        <aside class="contact-card">
+          <div class="section-head">
+            <h2>معلومات التواصل</h2>
+            <p>تواصل مباشر سريع بدون تعقيد.</p>
+          </div>
+
+          <div class="info-box">
+            <div class="info-row">
+              <span>الهاتف</span>
+              <span>0785833364</span>
+            </div>
+            <div class="info-row">
+              <span>البريد</span>
+              <span>info@dogresort.com</span>
+            </div>
+            <div class="info-row">
+              <span>ساعات العمل</span>
+              <span>يوميا</span>
+            </div>
+
+            <div class="info-divider"></div>
+
+            <div class="info-note">
+              إذا كان لديك سؤال سريع عن الحجز، انتقل إلى صفحة الحجز لإكمال البيانات بسهولة.
+            </div>
+
+            <div class="center">
+              <a class="btn ghost" href="BooKings.html">انتقل للحجز</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">لوفينغ هومز</div>
+        <p>
+          موقع بعد التحسين يركز على تجربة المستخدم والوضوح وسرعة الوصول للحجز والخدمات
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">روابط</div>
+        <a href="About.html">من نحن</a>
+        <a href="Facilities.html">الخدمات</a>
+        <a href="Packages.html">الحزم والأسعار</a>
+        <a href="BooKings.html">الحجز</a>
+        <a href="Contact.html">تواصل</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">معلومات</div>
+        <p>ساعات العمل يوميا</p>
+        <p>استقبال الرسائل عبر الموقع</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© جميع الحقوق محفوظة</span>
+      <a href="#top" class="to-top">للأعلى</a>
+    </div>
+  </footer>
+
+  <script src="Contact.js"></script>
+</body>
+</html>
