@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>لوفينغ هومز | الحجز</title>
+  <meta name="description" content="احجز إقامة كلبك بسهولة عبر نموذج واضح وخطوات قصيرة مع ملخص للحجز وتقدير السعر." />
+  <meta name="keywords" content="حجز فندق كلاب رعاية يومية إقامة حزم أسعار" />
+
+  <link rel="stylesheet" href="Style.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="الصفحة الرئيسية">
+        <span class="brand-mark">DR</span>
+        <span class="brand-text">لوفينغ هومز</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <a href="index.html">الرئيسية</a>
+        <a href="About.html">من نحن</a>
+        <a href="Facilities.html">الخدمات</a>
+        <a href="Packages.html">الحزم والأسعار</a>
+        <a href="BooKings.html" class="active">الحجز</a>
+        <a href="Contact.html">تواصل</a>
+      </nav>
+
+      <a class="header-cta" href="BooKings.html">احجز الآن</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="page-hero-content">
+          <h1>الحجز</h1>
+          <p>
+            نموذج حجز مختصر وواضح لتقليل الأخطاء وتحسين تجربة المستخدم.
+            املأ البيانات ثم راجع ملخص الحجز وتقدير السعر قبل الإرسال.
+          </p>
+
+          <div class="page-hero-actions">
+            <a class="btn ghost" href="Packages.html">شاهد الحزم والأسعار</a>
+            <a class="btn primary" href="#bookingForm">ابدأ الحجز</a>
+          </div>
+        </div>
+
+        <div class="page-hero-media" aria-label="صورة صفحة الحجز">
+          <img
+            src="img/لقطة%20شاشة%202026-03-04%20020557.png"
+            alt="صورة توضيحية لصفحة الحجز"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container booking-grid" id="bookingForm">
+        <div class="booking-card">
+          <div class="section-head">
+            <h2>نموذج الحجز</h2>
+            <p>املأ البيانات المطلوبة، وستظهر لك رسالة نجاح بعد الإرسال.</p>
+          </div>
+
+          <form class="form" id="formBooking" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="ownerName">اسم صاحب الكلب</label>
+                <input type="text" id="ownerName" placeholder="مثال: محمد" />
+                <div class="error" id="errOwnerName"></div>
+              </div>
+
+              <div class="field">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" placeholder="مثال: 0790000000" />
+                <div class="error" id="errPhone"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="dogName">اسم الكلب</label>
+                <input type="text" id="dogName" placeholder="مثال: لولو" />
+                <div class="error" id="errDogName"></div>
+              </div>
+
+              <div class="field">
+                <label for="dogSize">حجم الكلب</label>
+                <select id="dogSize">
+                  <option value="">اختر</option>
+                  <option value="small">صغير</option>
+                  <option value="medium">متوسط</option>
+                  <option value="large">كبير</option>
+                </select>
+                <div class="error" id="errDogSize"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="service">نوع الخدمة</label>
+                <select id="service">
+                  <option value="">اختر</option>
+                  <option value="boarding">إقامة فندقية</option>
+                  <option value="daycare">رعاية نهارية</option>
+                  <option value="grooming">تنظيف وتجميل</option>
+                </select>
+                <div class="error" id="errService"></div>
+              </div>
+
+              <div class="field">
+                <label for="package">الحزمة</label>
+                <select id="package">
+                  <option value="">اختر</option>
+                  <option value="basic">Basic</option>
+                  <option value="premium">Premium</option>
+                  <option value="vip">VIP</option>
+                </select>
+                <div class="error" id="errPackage"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="checkIn">تاريخ الدخول</label>
+                <input type="date" id="checkIn" />
+                <div class="error" id="errCheckIn"></div>
+              </div>
+
+              <div class="field">
+                <label for="checkOut">تاريخ الخروج</label>
+                <input type="date" id="checkOut" />
+                <div class="error" id="errCheckOut"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label>إضافات اختيارية</label>
+              <div class="checks">
+                <label class="check">
+                  <input type="checkbox" id="addonPhotos" />
+                  <span>تحديثات صور يومية</span>
+                </label>
+                <label class="check">
+                  <input type="checkbox" id="addonWalk" />
+                  <span>مشي إضافي</span>
+                </label>
+                <label class="check">
+                  <input type="checkbox" id="addonVet" />
+                  <span>فحص سريع (عند الحاجة)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="notes">ملاحظات</label>
+              <textarea id="notes" rows="4" placeholder="أي ملاحظات مهمة مثل حساسية أو أدوية"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">إرسال الحجز</button>
+              <button class="btn ghost" type="button" id="resetBtn">مسح البيانات</button>
+            </div>
+
+            <div class="success" id="successMsg"></div>
+          </form>
+        </div>
+
+        <aside class="booking-card booking-summary">
+          <div class="section-head">
+            <h2>ملخص الحجز</h2>
+            <p>يتم تحديث الملخص تلقائيا عند تغيير أي حقل.</p>
+          </div>
+
+          <div class="summary-box">
+            <div class="summary-row">
+              <span>الاسم</span>
+              <span id="sumOwner">-</span>
+            </div>
+            <div class="summary-row">
+              <span>الهاتف</span>
+              <span id="sumPhone">-</span>
+            </div>
+            <div class="summary-row">
+              <span>اسم الكلب</span>
+              <span id="sumDog">-</span>
+            </div>
+            <div class="summary-row">
+              <span>الحجم</span>
+              <span id="sumSize">-</span>
+            </div>
+            <div class="summary-row">
+              <span>الخدمة</span>
+              <span id="sumService">-</span>
+            </div>
+            <div class="summary-row">
+              <span>الحزمة</span>
+              <span id="sumPackage">-</span>
+            </div>
+            <div class="summary-row">
+              <span>المدة</span>
+              <span id="sumDays">-</span>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-total">
+              <span>تقدير السعر</span>
+              <span id="sumPrice">0</span>
+            </div>
+
+            <div class="summary-note">
+              السعر تقديري للتدريب فقط ويمكن تغييره حسب سياسة الفندق.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">لوفينغ هومز</div>
+        <p>
+          موقع بعد التحسين يركز على تجربة المستخدم والوضوح وسرعة الوصول للحجز والخدمات
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">روابط</div>
+        <a href="About.html">من نحن</a>
+        <a href="Facilities.html">الخدمات</a>
+        <a href="Packages.html">الحزم والأسعار</a>
+        <a href="BooKings.html">الحجز</a>
+        <a href="Contact.html">تواصل</a>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-title">معلومات</div>
+        <p>ساعات العمل يوميا</p>
+        <p>استقبال الحجوزات عبر الموقع</p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© جميع الحقوق محفوظة</span>
+      <a href="#top" class="to-top">للأعلى</a>
+    </div>
+  </footer>
+
+  <script src="BooKings.js"></script>
+</body>
+</html>
